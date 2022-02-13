@@ -38,4 +38,4 @@ Beispiel für eine Scene mit einem Label `helloLabel`, einem TextFeld `textField
         <Button fx:id="button" layoutX="60.0" layoutY="187.0" mnemonicParsing="false" onAction="#buttonClicked" text="Button"/>
 </AnchorPane>
 ```
-[Link](###setup-)
+[Link](###-setup-für-eine-javafx-anwendung:)
