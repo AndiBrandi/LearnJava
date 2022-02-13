@@ -1,7 +1,6 @@
 # LearnJava
 
 
-
 ## JavaFX_Basic
 
 ### Setup für eine JavaFX Anwendung:
@@ -38,4 +37,7 @@ Beispiel für eine Scene mit einem Label `helloLabel`, einem TextFeld `textField
         <Button fx:id="button" layoutX="60.0" layoutY="187.0" mnemonicParsing="false" onAction="#buttonClicked" text="Button"/>
 </AnchorPane>
 ```
-[Link](###-setup-für-eine-javafx-anwendung:)
+
+Damit die Scene weiß wer sie steuert (Controller) muss dieser erstmal dazu gelinkt werden:
+- Auf der untersten Schicht der Scene, hier die Anchorpane, muss ein Attribut `fx:controller="..."`fxml als Inhalt
+den Controller der Scene beinhalten. In diesem Fall "JavaFX_Basic.Controller", *Package:* `JavaFX_Basic` + `.` + *Klasse:* `Controller`
