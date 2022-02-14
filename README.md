@@ -110,3 +110,5 @@ den Controller der Scene beinhalten. In diesem Fall "JavaFX_Basic.Controller", *
 
 # Dateioperationen in Java 
 
+
+# JSON
