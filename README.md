@@ -4,11 +4,16 @@
 von Andreas Brandstetter (5AHEL HTL-Steyr)
 
 <details>
-  <summary>Inhalt</summary>
+  <summary>Inhaltsverzeichnis</summary>
   
   - [Tipps & IntelliJ Shortcuts](#tipps--intellij-shortcuts)
     - [Alt+Enter](#alt--enter)
-  - [JavaFX_Basic](#javafx_basic)
+    - [IDE Features](#ide-features)
+  - [JavaFX Basic](#javafx-basic)
+  - [JavaFX Advanced](#javafx-advanced)
+  - [Dateioperationen](#dateioperationen)
+  - [JSON](#json)
+  - [JDBC](#jdbc)
   
 
 </details>
@@ -44,6 +49,8 @@ public void buttonClicked(ActionEvent actionEvent) {
 
     }
 ```
+## IDE features  
+
 ### Woher weiß ich ob der Datentyp/die Klasse die ich gewählt habe die richtige ist?
 Erklärt hier am Beispiel einer Dateioperation
 ```java
@@ -58,17 +65,17 @@ try {
             e.printStackTrace();
         }
 ```
-Woher weiß ich, dass der Wert, den ich von `reder().readLine();` zurückbekomme ein `String` ist?  
+Woher weiß ich, dass der Wert, den ich von `reader().readLine();` zurückbekomme ein `String` ist?  
 
 Die Auto-Vervollständigung von IntelliJ zeigt rechts im Kontext Menü an, welcher Datentyp bei der jeweiligen Methode zurück kommt, hier `String`.  
 
 ![grafik](https://user-images.githubusercontent.com/79520423/153775529-b4cd7992-6696-4d15-a8c1-c2c07dc28411.png)
 
 
-# JavaFX_Basic
+# JavaFX Basic
 
 ### Setup für eine JavaFX Anwendung:
-#### 1. checken ob die richtige JDK eingestellt ist:
+#### 1. Checken ob die richtige JDK eingestellt ist:
 - Unter `File -> Project Structure -> SDK` eine JDK auswählen die funktioniert (nicht rot ist)
 - Unter `File -> Project Structure -> Language Level` "SDK Default" auswählen
 
@@ -106,9 +113,13 @@ Damit die Scene weiß wer sie steuert (Controller) muss dieser erstmal dazu geli
 - Auf der untersten Schicht der Scene, hier die Anchorpane, muss ein Attribut `fx:controller="..."`fxml als Inhalt
 den Controller der Scene beinhalten. In diesem Fall "JavaFX_Basic.Controller", *Package:* `JavaFX_Basic` + `.` + *Klasse:* `Controller`
 
+# JavaFX Advanced
+
+# Dateioperationen  
 
 
-# Dateioperationen in Java 
+# JSON  
 
 
-# JSON
+# JDBC
+
