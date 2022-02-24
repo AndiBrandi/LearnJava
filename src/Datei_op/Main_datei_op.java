@@ -1,8 +1,8 @@
-package File_operations;
+package Datei_op;
 
 import java.io.*;
 
-public class Main {
+public class Main_datei_op {
 
     public static void main(String[] args) {
 
@@ -11,6 +11,7 @@ public class Main {
             // Create new Reader
 
             String string = reader.readLine();
+            System.out.println(string);
             // do something with your String
         } catch (IOException e) {
             e.printStackTrace();
