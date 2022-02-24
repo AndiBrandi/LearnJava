@@ -123,3 +123,75 @@ den Controller der Scene beinhalten. In diesem Fall "JavaFX_Basic.Controller", *
 
 # JDBC
 
+Datenbank abfragen in Java mittels JDBC erfolgen immer in 4 einfachen Schritten  
+
+### 1. Connection aufbauen  
+
+Wir verwenden eine eigene Klasse `Database` die für das aufbauen der Verbindung zuständig ist. Dies hat den Vorteil dass wir, um die Connection zu bekommen, nur eine Methode aufrufen müssen. 
+
+```java  
+    public static Connection getInstance() {
+
+        if (connection == null) {
+            try {
+
+                connection = DriverManager.getConnection("jdbc:" + type + "://" + host + ":" + port + "/" + database, user, password);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return connection;
+    }
+```
+
+###### _Dies hat den Vorteil, dass bei jedem aufruf der statischen Methode `getInstance()` wegen Singleton verfahren immer die gleiche Connection verwendet wird._
+
+Also holen wir uns die Connection dorthin wo wir sie brauchen
+
+```java  
+Connection connection = Database.getInstance();
+```
+
+### 2. Auf der Connection ein Statement definieren
+
+Mit einem `PreparedStatement` definieren wir unsere Anfrage an die DB.
+
+```java
+PreparedStatement statement = connection.prepareStatement("SELECT * FROM tabellen_Name");
+```
+
+### 3. Statement ausführen und Antwort in ein ResultSet speichern
+
+Das Statement wird mit der methode `executeQuery()` oder `executeUpdate()` an die DB geschickt.  
+
+```java
+ResultSet resultSet = statement.executeQuery();
+```  
+###### _Die Methode `executeQuery()` wird ausschließlich zum ausführen von Statements mit Rückgabe "SELECT" verwendet. Für andere Typen von SQL Statements wie "INSERT INTO", "UPDATE" und "DELETE" wird `executeUpdate` verwendet._  
+
+#### ❗Wenn nach ausführen des Statements keine Rückgabe von der DB kommt ist nach diesem Punkt schluss❗
+
+### 4. Daten aus dem ResultSet extrahieren  
+
+Wenn es sich aber um ein `SELECT` Statement handelt, d.h. wenn Daten zurückkommen müssen wir diese logischerweise noch verarbeiten  
+
+#### Handelt es sich um ein Statement bei dem nur EINE Zeile zurückkommt reicht es das ResultSet einmal zu durchlaufen:  
+
+Mit `getString()` bzw. `getInt()` lassen sich bestimmte Daten aus dem Set herausholen
+
+```java
+if (resultSet.next()) {
+  System.out.println(resultSet.getString("variable"));
+}
+```
+
+#### Handelt es sich um ein Statement bei dem mehrere Datensätze zurückkommen muss das Set mehrmals durchlaufen werden:
+
+```java
+while (resultSet.next()) {
+  System.out.println(resultSet.getString("title"));
+}
+```
+
+###  Zu guter letzt sollten Statement und ResultSet noch geschlossen werden. Hierfür gibt es die methode `close()` in beiden Klassen
