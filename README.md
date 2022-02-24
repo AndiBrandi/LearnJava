@@ -1,5 +1,5 @@
 # LearnJava
-### Ein Guide für die gängisten Aufgaben bei der Java Programmierung (in [IntelliJ IDEA](https://www.jetbrains.com/de-de/idea/))
+### Ein Guide für die gängisten Aufgaben bei der Java Programmierung (in [IntelliJ IDEA Ultimate](https://www.jetbrains.com/de-de/idea/))
 
 von Andreas Brandstetter (5AHEL HTL-Steyr)
 
