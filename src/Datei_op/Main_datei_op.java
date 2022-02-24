@@ -6,16 +6,43 @@ public class Main_datei_op {
 
     public static void main(String[] args) {
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("test.txt"));
-            // Create new Reader
+        String str = read();
+        System.out.println(str);
 
-            String string = reader.readLine();
-            System.out.println(string);
-            // do something with your String
+        write("Kersan");
+
+    }
+
+    public static String read() {
+
+        String string = "";
+        try {
+            // Create new Reader
+            BufferedReader reader = new BufferedReader(new FileReader("src/Datei_op/test.txt"));
+
+            // Read with your reader
+            string = reader.readLine();
+            // Do something with your String
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return string;
+    }
+
+
+    private static void write(String s) {
+
+        try {
+            // Create new Reader
+            BufferedWriter writer = new BufferedWriter(new FileWriter("src/Datei_op/test.txt"));
+
+            // Write with your writer
+            writer.write(s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
