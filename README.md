@@ -25,7 +25,7 @@ Der folgende Code ist **rot** markiert da versucht wird den Rückgabewert von .g
 
 1. Wenn dir deine IDE etwas **rot** markiert ist es schlau als erstes den Code auf Tipp- und Klammerfehler zu prüfen.  
 
-2. Kannst du diese Fehler ausschließen solltest du als nächstes in Erwägung ziehen **mit der maus über den rot markierten Code zu hovern**  
+2. Kannst du diese Fehler ausschließen solltest du als nächstes in Erwägung ziehen **mit der maus über den rot markierten Code zu fahren**  
 In den meisten Fällen weiß die IDE hier schon wo der Fehler liegt und zeigt diesen auch an.  
 ![grafik](https://user-images.githubusercontent.com/79520423/153776422-eff25a1b-274a-42ad-841a-870baf6a965a.png)
 ###### _In unserem Beispiel gibt es einen Fehler da der Inhalt eines TextFelds (String) nicht einfach in eine Integer variable gespeichert werden kann_
