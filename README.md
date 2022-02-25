@@ -9,6 +9,7 @@ von Andreas Brandstetter (5AHEL HTL-Steyr)
   - [Tipps & IntelliJ Shortcuts](#tipps--intellij-shortcuts)
     - [Alt+Enter](#alt--enter)
     - [IDE Features](#ide-features)
+  - [Java Basic](#java-basic)
   - [JavaFX Basic](#javafx-basic)
   - [JavaFX Advanced](#javafx-advanced)
   - [Dateioperationen](#dateioperationen)
@@ -70,6 +71,136 @@ Woher weiß ich, dass der Wert, den ich von `reader().readLine();` zurückbekomm
 Die Auto-Vervollständigung von IntelliJ zeigt rechts im Kontext Menü an, welcher Datentyp bei der jeweiligen Methode zurück kommt, hier `String`.  
 
 ![grafik](https://user-images.githubusercontent.com/79520423/153775529-b4cd7992-6696-4d15-a8c1-c2c07dc28411.png)
+
+# Java Basic
+
+## Klassen
+Eine Klasse ist der Bauplan für ein Objekt.  
+###### _Für diese Erklärung verwende ich als Klasse den Bauplan eines Bmw, und als Objekt das Auto selbst._
+
+#### Der Klassische Aufbau einer Klasse sieht in fast allen Fällen folgendermaßen aus
+
+```java
+public class Bmw {
+    //Klassenvariablen
+    static String firmenName = "Bmw Group";
+    String modell;
+    String motor;
+    int sitzAnzahl;
+
+    //Methoden
+    private void printDetails() {
+        System.out.println(vorname + " , " + nachname + " , " + alter);
+    }
+    
+    private void drive() {
+            System.out.println(modell + "Bmw fährt");
+    }
+    
+}
+```  
+
+Wird ein Objekt dieser Klasse erstellt hat dieses alle Eigenschaften (Klassenvariablen) und Methoden die **NICHT** statisch sind.
+
+
+## Konstruktoren
+
+Der Konstruktor erstellt/_konstruiert_ aus dem Bauplan, ein Objekt  
+###### Beispiel: mit `new` konstruiert man einen neuen Bmw aus dem Bauplan heraus.
+Ein neues Objekt kann mit Verwendung von _new_ erzeugt werden.
+```java
+Bmw bmw = new Bmw();
+```
+
+###### _`new`_ ruft den Konstruktor der Klasse Bmw auf
+
+Ein Konstruktor kann gar keine
+```java
+   public Bmw() {
+   }
+```
+
+bis alle Klassenvariablen beinhalten
+
+
+```java
+    public Bmw(String modell, String motor, int sitzAnzahl) {
+        this.modell = modell;
+        this.motor = motor;
+        this.sitzAnzahl = sitzAnzahl;
+    }
+```
+##### Auch hier gilt wieder, alle Klassenvariablen und Methoden die NICHT statisch sind!
+###### Man konstruiert auch keinen Bmw in dessen Elektronik der Firmenname integriert ist. Der Firmenname steht auf dem Bauplan
+
+
+#### Beim erstellen des Objekts hat man dementsprechend auch die Auswahl welchen Konstruktor man verwendet
+![grafik](https://user-images.githubusercontent.com/79520423/155752843-f062d95f-df85-4cfe-93da-3c9cb23b5422.png)  
+
+
+Unter der Annahme es existiert nur der letztere Konstruktor in der Klasse müsste man also beim erstellen des Objekts alle Daten angeben
+```java
+Bmw bmw = new Bmw("3er","V8", 4);
+```
+
+
+## Methoden
+
+Sind funktionen die beim Aufruf Code ausführen. Eine Methode kann einen Rückgabewert haben, muss aber nicht.
+
+```java
+    public String getModell() {
+        String modell = "3er";
+        
+        return modell;
+    }
+```
+##### In diesem Fall gibt die Methode einen String zurück, also muss dies auch vor dem Namen der Methode definiert sein.  
+
+Methoden können auch Parameter entgegen nehmen, mit denen der Code den sie ausführen dann arbeitet. Eine Methode kann beliebig viele Parameter entgegen nehmen.
+
+Diese Methode z.B: nimmt den Modellnamen des Autos, fügt den übergebenen String hinten an und gibt das Ergebnis zurück.
+```java
+    private String addString(String s) {
+        
+        String str = modell + " " + s;
+        
+        return str;
+    }
+```
+**In der Main Klasse wo die Methode aufgerufen wird sähe dies in etwa so aus:**
+
+```java
+        Bmw bmw = new Bmw("3er","V8", 4);
+        String s = bmw.addString("test");
+        
+        System.out.println(s);
+```
+Das Ergebnis in der Konsole wäre: `3er test`
+
+## Sichtbarkeit und Static  
+
+In Java gibt es 4 zustände die Variablen und Methoden annehmen können
+- default _kein modifier_: Kann in der **selben Klasse**, im **selben Package** und in **Klassen die davon erben** verwendet werden
+- public: Kann **überall** verwendet werden
+- private: Kann nur in der **selben Klasse** verwendet werden
+- protected: Kann in der **selben Klasse** und **Klassen die davon erben** verwendet werden.  
+
+### Static
+Wenn eine Variable als `static` deklariert ist bedeutet das, egal wo die Variable geändert wird, ist der Wert immer gleich
+_Wenn also der Firmenname geändert wird heißt dass er ist überall geändert. Es macht auch keinen Sinn wenn Bmw ihren Namen ändern würden, dass irgendwo anders die selbe Fabrik immer noch unter dem alten Namen läuft._  
+
+Methoden die Statisch deklariert sind können **NICHT** von einem Objekt aufgerufen werden, sondern nur von der Klasse selbst.
+Auch kann keine Variable eines Objekts von einer statischen Methode aufgerufen werden.
+
+```java
+Bmw.callCeo();
+```
+###### _Es macht keinen Sinn wenn jeder x-beliebige Bmw den CEO anrufen könnte._
+###### _Genau so macht es keinen Sinn dass der Ceo der den Bauplan hat, das Modell eines x-beliebigen Bmw ändern könnte._
+
+
+# Java Advanced
 
 
 # JavaFX Basic
