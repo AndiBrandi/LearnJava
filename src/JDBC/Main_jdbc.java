@@ -22,9 +22,11 @@ public class Main_jdbc {
 
             // Irgendwas mit den Daten anfangen
 
+
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("title"));
             }
+
 
         } catch (SQLException e) {
             e.printStackTrace();
