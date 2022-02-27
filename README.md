@@ -184,7 +184,7 @@ In Java gibt es 4 zustände die Variablen und Methoden annehmen können
 - **default** _kein modifier_: Kann in der **selben Klasse**, und im **selben Package** verwendet werden
 - **public**: Kann **überall** verwendet werden.
 - **private**: Kann nur in der **selben Klasse** verwendet werden
-- **protected**: Kann in der **selben Klasse** in **Klassen die davon erben** und in **Klassen die davon erben** verwendet werden.  
+- **protected**: Kann in der **selben Klasse** in **Klassen die davon erben** und in **Klassen im selben Package** verwendet werden.  
 
 ### Static
 Wenn eine Variable als `static` deklariert ist bedeutet das, egal wo die Variable geändert wird, ist der Wert immer gleich
