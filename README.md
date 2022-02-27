@@ -78,7 +78,12 @@ Die Auto-Vervollständigung von IntelliJ zeigt rechts im Kontext Menü an, welch
 Eine Klasse ist der Bauplan für ein Objekt.  
 ###### _Für diese Erklärung verwende ich als Klasse den Bauplan eines Bmw, und als Objekt das Auto selbst._
 
-#### Der Klassische Aufbau einer Klasse sieht in fast allen Fällen folgendermaßen aus
+#### Der Klassische Aufbau einer Klasse sieht in fast allen Fällen folgendermaßen aus:  
+
+- Imports
+- Klassenkopf
+  - Klassenvariablen
+  - Methoden
 
 ```java
 public class Bmw {
