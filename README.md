@@ -112,7 +112,7 @@ Wird ein Objekt dieser Klasse erstellt hat dieses alle Eigenschaften (Klassenvar
 
 Der Konstruktor erstellt/_konstruiert_ aus dem Bauplan, ein Objekt  
 ###### Beispiel: mit `new` konstruiert man einen neuen Bmw aus dem Bauplan heraus.
-Ein neues Objekt kann mit Verwendung von _new_ erzeugt werden.
+Ein neues Objekt kann mit Verwendung von `new` erzeugt werden.
 ```java
 Bmw bmw = new Bmw();
 ```
@@ -136,7 +136,7 @@ bis alle Klassenvariablen beinhalten
     }
 ```
 ##### Auch hier gilt wieder, alle Klassenvariablen und Methoden die NICHT statisch sind!
-###### Man konstruiert auch keinen Bmw in dessen Elektronik der Firmenname integriert ist. Der Firmenname steht auf dem Bauplan
+###### Der Firmenname ist auch nicht in der Elektronik eines x-beliebigen Bmw definiert. Der Firmenname ist in einem Dokument in Büro des Chefs definiert
 
 
 #### Beim erstellen des Objekts hat man dementsprechend auch die Auswahl welchen Konstruktor man verwendet
