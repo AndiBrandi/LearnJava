@@ -9,7 +9,7 @@ public class Main_datei_op {
         String str = read();
         System.out.println(str);
 
-        write("Kersan");
+        write("Hallo Huaba");
 
     }
 
@@ -22,11 +22,11 @@ public class Main_datei_op {
 
             // Read with your reader
             string = reader.readLine();
-            // Do something with your String
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return string;
     }
 
@@ -34,7 +34,7 @@ public class Main_datei_op {
     private static void write(String s) {
 
         try {
-            // Create new Reader
+            // Create new Writer
             BufferedWriter writer = new BufferedWriter(new FileWriter("src/Datei_op/test.txt"));
 
             // Write with your writer

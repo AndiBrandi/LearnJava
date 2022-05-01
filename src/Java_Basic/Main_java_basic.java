@@ -1,6 +1,6 @@
 package Java_Basic;
 
-public class Main_java {
+public class Main_java_basic {
 
     public static void main(String[] args) {
 
