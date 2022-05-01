@@ -10,6 +10,7 @@ von Andreas Brandstetter (5AHEL HTL-Steyr)
     - [Alt+Enter](#alt--enter)
     - [IDE Features](#ide-features)
   - [Java Basic](#java-basic)
+  - [Java Advanced](#java-advanced)
   - [JavaFX Basic](#javafx-basic)
   - [JavaFX Advanced](#javafx-advanced)
   - [Dateioperationen](#dateioperationen)
@@ -205,7 +206,59 @@ Bmw.callCeo();
 ###### _Genau so macht es keinen Sinn dass der Ceo der den Bauplan hat, das Modell eines x-beliebigen Bmw ändern könnte._
 
 
+
 # Java Advanced
+
+## Threads
+Threads in Java haben die Aufgabe, Code parallel zum Hauptprogramm auszuführen ohne dabei das Hauptprogramm zu blockieren.  
+![grafik](https://user-images.githubusercontent.com/79520423/166140455-b641ec76-8c87-446d-a6ba-b8b6de74082c.png)
+
+Dies ist z.B: dann nützlich, wenn eine Chat App in einer Schleife neue Nachrichten abgefragt werden sollen. 
+Auf diese Weise kann der Neben-Thread die schleife durchlaufen, und gleichzeitig das Hauptprogramm weitere Aufgaben ausführen.
+
+#### Threads in Java können auf 3 Arten erstellt werden:  
+---
+### Klasse extends Thread
+
+Beispiel CountDown: Der Thread soll im Countdown Objekt die Sekunden herunterzählen.  
+
+In der Klasse selbst muss die run Methode aufgerufen werden
+
+![grafik](https://user-images.githubusercontent.com/79520423/166140765-5929b792-85c3-4a57-95e5-a0e6527c22f8.png)  
+
+In die `run` kommt jeglicher Code der parallel ausgeführt werden soll  
+![grafik](https://user-images.githubusercontent.com/79520423/166141580-3d9ce4f7-77a3-4b1a-a5e1-123dcc9e8b3e.png)
+##### Es wird empfohlen immer eine Abbruchbedingung der Schleife zu haben, und nicht einfach eine Endlosschleife bis zur beendung des Programms laufen zu lassen.
+
+Um den Thread zu starten ruft man vom erstellten Objekt die start Methode auf.  
+![grafik](https://user-images.githubusercontent.com/79520423/166141640-04c3ef6f-ba7c-48ff-b4b8-8e592b28be02.png)
+
+---
+### Klasse implements Runnable
+
+Implementiert eine Klasse dieses Interface muss sie auch die `run` Methode implementieren.  
+![grafik](https://user-images.githubusercontent.com/79520423/166141790-4c55f2ff-9408-4b1e-8a09-d2516e4d2ecf.png)
+
+Genau wie oben, kommt hier der Code der parallel ausgeführt werden soll hinein.
+
+Um den Thread zu starten muss die Klasse mit dem `Runnable` Interface in einen neuen Thread übergeben werden. Dieser neue Thread kann dann wiederrum mit der `start()` Methode gestartet werden.  
+![grafik](https://user-images.githubusercontent.com/79520423/166142160-03430073-868f-43f8-aee5-155109815a05.png)
+
+---
+### Anonymer Thread
+
+Ein anonymer Thread kann grundsätzlich an einer beliebigen Stelle im Programm erstellt werden.  
+Dies sähe dann wie folgt aus:  
+
+![grafik](https://user-images.githubusercontent.com/79520423/166142971-7b4ecd79-8dce-4c0c-8fed-d80a18388ea7.png)  
+
+Logik einbauen:  
+![grafik](https://user-images.githubusercontent.com/79520423/166143008-29377cc3-1323-4002-9c55-37743cb83876.png)  
+
+Diesen Thread starten wir wiederrum direkt mit der `start()` Methode.  
+![grafik](https://user-images.githubusercontent.com/79520423/166143071-93bc498d-6dc0-4456-98e4-68afd6c3ee52.png)
+
+###### ❗Außerdem ist es wichtig hinter der geschwungenen Klammer des Threads einen Strichpunkt zu setzen.
 
 
 # JavaFX Basic
@@ -227,6 +280,7 @@ Bmw.callCeo();
 - Sind in der Liste rote Einträge, lösch diese raus mit **"-"**
 
 ![grafik](https://user-images.githubusercontent.com/79520423/153752395-e160b88c-88d7-4655-a046-06068da4a018.png)
+
 
 
 ### Grafische Benutzeroberfläche (GUI):
