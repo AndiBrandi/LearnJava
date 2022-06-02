@@ -83,8 +83,8 @@ Eine Klasse ist der Bauplan für ein Objekt.
 
 - Imports
 - Klassenkopf
-  - Klassenvariablen
-  - Methoden
+- Klassenvariablen
+- Methoden
 
 ```java
 public class Bmw {
