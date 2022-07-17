@@ -20,7 +20,7 @@ von Andreas Brandstetter (5AHEL HTL-Steyr)
 
 </details>
 
-Um die Doku besser nachvollziehen zu können empfehle ich das Repository herunterzuladen.
+Die einzelnen Themen sind in packages unterteilt welche sich im `src` Ordner befinden.
 
 
 # Tipps & IntelliJ Shortcuts
