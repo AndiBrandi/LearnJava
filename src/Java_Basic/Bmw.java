@@ -1,47 +1,48 @@
 package Java_Basic;
 
 public class Bmw {
-    static String firmenName = "";
-    String modell;
-    String motor;
-    int sitzAnzahl;
+    static String companyName = "BMW Group";
+    String model;
+    String engine;
+    int seatCount;
 
     public Bmw() {
     }
 
-    public Bmw(String modell, String motor, int sitzAnzahl) {
-        this.modell = modell;
-        this.motor = motor;
-        this.sitzAnzahl = sitzAnzahl;
+    public Bmw(String model, String engine, int seatCount) {
+        this.model = model;
+        this.engine = engine;
+        this.seatCount = seatCount;
     }
 
     private void printDetails() {
 
-        System.out.println(modell + " , " + motor + " , " + sitzAnzahl);
+        System.out.println(model + " , " + engine + " , " + seatCount);
 
     }
 
     public void drive() {
 
-        System.out.println(modell + "Bmw fährt");
+        System.out.println(model + "Bmw fährt");
+    }
+
+    public static void changeCompanyName(String newName) {
+
+        companyName = newName;
 
     }
 
-    public static void callCeo() {
 
+    public String addToName(String s) {
 
+        model = model + " " + s;
+
+        return model;
     }
 
-    public String getModell() {
 
-        return modell;
-    }
-
-    public String addString(String s) {
-
-        String str = modell + " " + s;
-
-        return str;
+    public String getModel() {
+        return model;
     }
 
 }

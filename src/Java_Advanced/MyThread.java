@@ -1,5 +1,8 @@
 package Java_Advanced;
 
+/**
+ * Thread Klasse mit extends Thread
+ */
 public class MyThread extends Thread {
 
     Integer count;

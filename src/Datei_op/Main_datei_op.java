@@ -6,9 +6,13 @@ public class Main_datei_op {
 
     public static void main(String[] args) {
 
+        //Read text in file
         String str = read();
+
+        //Output text in Console
         System.out.println(str);
 
+        //Write "Hallo Huaba" to the file
         write("Hallo Huaba");
 
     }

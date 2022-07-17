@@ -1,5 +1,9 @@
 package Java_Advanced;
 
+
+/**
+ * Thread Klasse mit implements Runnable Interface
+ */
 public class MyThread2 implements Runnable {
 
     Integer count;

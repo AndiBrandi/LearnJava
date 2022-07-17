@@ -1,6 +1,6 @@
-package Sockets;
+package JSON;
 
-public class Main_Sockets {
+public class Main_json {
 
     public static void main(String[] args) {
 
