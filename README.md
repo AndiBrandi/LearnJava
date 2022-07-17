@@ -20,6 +20,9 @@ von Andreas Brandstetter (5AHEL HTL-Steyr)
 
 </details>
 
+Um die Doku besser nachvollziehen zu können empfehle ich das Repository herunterzuladen.
+
+
 # Tipps & IntelliJ Shortcuts
 
 ## Alt + Enter
@@ -89,15 +92,15 @@ Eine Klasse ist der Bauplan für ein Objekt.
 ```java
 public class Bmw {
     //Klassenvariablen
-    static String firmenName = "Bmw Group";
-    String modell;
-    String motor;
-    int sitzAnzahl;
+    static String companyName = "Bmw Group";
+    String model;
+    String engine;
+    int seatCount;
 
     //Methoden
     private void printDetails() {
-        System.out.println(vorname + " , " + nachname + " , " + alter);
-    }
+        System.out.println("This is a"model + "BMW , " + engine + "engine with " + seatCount + " seats");
+    } 
     
     private void drive() {
             System.out.println(modell + "Bmw fährt");
@@ -130,10 +133,10 @@ bis alle Klassenvariablen beinhalten
 
 
 ```java
-    public Bmw(String modell, String motor, int sitzAnzahl) {
-        this.modell = modell;
-        this.motor = motor;
-        this.sitzAnzahl = sitzAnzahl;
+    public Bmw(String model, String engine, int seatCount) {
+        this.model = model;
+        this.engine = engine;
+        this.seatCount = seatCount;
     }
 ```
 ##### Auch hier gilt wieder, alle Klassenvariablen und Methoden die NICHT statisch sind!
@@ -141,7 +144,8 @@ bis alle Klassenvariablen beinhalten
 
 
 #### Beim erstellen des Objekts hat man dementsprechend auch die Auswahl welchen Konstruktor man verwendet
-![grafik](https://user-images.githubusercontent.com/79520423/155752843-f062d95f-df85-4cfe-93da-3c9cb23b5422.png)  
+![grafik](https://user-images.githubusercontent.com/79520423/179399731-0cdc1895-73be-418d-8b19-6e55f48d3d85.png)
+  
 
 
 Unter der Annahme es existiert nur der letztere Konstruktor in der Klasse müsste man also beim erstellen des Objekts alle Daten angeben
@@ -167,7 +171,7 @@ Methoden können auch Parameter entgegen nehmen, mit denen der Code den sie ausf
 
 Diese Methode z.B: nimmt den Modellnamen des Autos, fügt den übergebenen String hinten an und gibt das Ergebnis zurück.
 ```java
-    private String addString(String s) {
+    private String addToName(String s) {
         
         String str = modell + " " + s;
         
@@ -178,7 +182,7 @@ Diese Methode z.B: nimmt den Modellnamen des Autos, fügt den übergebenen Strin
 
 ```java
         Bmw bmw = new Bmw("3er","V8", 4);
-        String s = bmw.addString("test");
+        String s = bmw.addToName("test");
         
         System.out.println(s);
 ```
@@ -200,9 +204,9 @@ Methoden die Statisch deklariert sind können **NICHT** von einem Objekt aufgeru
 Auch kann keine Variable eines Objekts von einer statischen Methode aufgerufen werden.
 
 ```java
-Bmw.callCeo();
+Bmw.changeCompanyName("BMW Alliance");
 ```
-###### _Es macht keinen Sinn wenn jeder x-beliebige Bmw den CEO anrufen könnte._
+###### _Es macht keinen Sinn wenn jeder x-beliebige Bmw den namen der Firma ändern könnte._
 ###### _Genau so macht es keinen Sinn dass der Ceo der den Bauplan hat, das Modell eines x-beliebigen Bmw ändern könnte._
 
 
