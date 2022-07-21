@@ -148,7 +148,7 @@ bis alle Klassenvariablen beinhalten
   
 
 
-Unter der Annahme es existiert nur der letztere Konstruktor in der Klasse müsste man also beim erstellen des Objekts alle Daten angeben
+Unter der Annahme es existiert nur der erste Konstruktor in der Klasse müsste man also beim erstellen des Objekts alle Daten angeben
 ```java
 Bmw bmw = new Bmw("3er","V8", 4);
 ```
