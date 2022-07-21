@@ -217,14 +217,14 @@ Bmw.changeCompanyName("BMW Alliance");
 
 # Java Advanced
 
-## Java_Adv_Threads
-Java_Adv_Threads in Java haben die Aufgabe, Code parallel zum Hauptprogramm auszuführen ohne dabei das Hauptprogramm zu blockieren.  
+## Threads
+Threads in Java haben die Aufgabe, Code parallel zum Hauptprogramm auszuführen ohne dabei das Hauptprogramm zu blockieren.  
 ![grafik](https://user-images.githubusercontent.com/79520423/166140455-b641ec76-8c87-446d-a6ba-b8b6de74082c.png)
 
 Dies ist z.B: dann nützlich, wenn eine Chat App in einer Schleife neue Nachrichten abgefragen soll. 
 Auf diese Weise kann der Neben-Thread die schleife durchlaufen, und gleichzeitig das Hauptprogramm weitere Aufgaben ausführen.
 
-#### Java_Adv_Threads in Java können auf 3 Arten erstellt werden:  
+#### Threads in Java können auf 3 Arten erstellt werden:  
 ---
 ### Klasse extends Thread
 
@@ -266,7 +266,7 @@ Logik einbauen:
 Diesen Thread starten wir wiederrum direkt mit der `start()` Methode.  
 ![grafik](https://user-images.githubusercontent.com/79520423/166143071-93bc498d-6dc0-4456-98e4-68afd6c3ee52.png)
 
-###### ❗Außerdem ist es wichtig hinter der geschwungenen Klammer des Java_Adv_Threads einen Strichpunkt zu setzen.
+###### ❗Außerdem ist es wichtig hinter der geschwungenen Klammer des Threads einen Strichpunkt zu setzen.
 
 ## Vererbung
 
@@ -285,6 +285,12 @@ Ein Tesla hat seine eigenen funktionen + zusätzlich die von Auto und Fahrzeug.
 
 
 ## Interfaces
+
+"Ein Interface ist eine Art vertrag" heißt, ein Interface hat die Aufgabe, dem Compiler garantieren zu können, dass Klasse A eine bestimmte Methode beinhaltet.
+
+Anhand eines Beispiels erklärt:
+
+
 
 ## Abstrakte Klassen
 
