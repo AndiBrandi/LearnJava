@@ -21,10 +21,12 @@ public class Bmw {
 
     }
 
+
     public void drive() {
 
         System.out.println(model + "Bmw fährt");
     }
+
 
     public static void changeCompanyName(String newName) {
 

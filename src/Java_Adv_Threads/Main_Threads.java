@@ -1,12 +1,15 @@
-package Java_Advanced;
+package Java_Adv_Threads;
 
-public class Main_java_Advanced {
+public class Main_Threads {
 
     static Integer count = 0;
 //    static Thread t3;
 
 
     public static void main(String[] args) {
+
+
+
 
         //Starten von MyThread
         MyThread mt = new MyThread();
@@ -19,7 +22,7 @@ public class Main_java_Advanced {
         t.start();
 
 
-        //Starten eines anonymen Threads
+        //Starten eines anonymen Java_Adv_Threads
         Thread t3 = new Thread() {
             @Override
             public void run() {

@@ -1,4 +1,4 @@
-package Java_Advanced;
+package Java_Adv_Threads;
 
 /**
  * Thread Klasse mit extends Thread
