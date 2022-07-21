@@ -221,7 +221,7 @@ Bmw.changeCompanyName("BMW Alliance");
 Threads in Java haben die Aufgabe, Code parallel zum Hauptprogramm auszuführen ohne dabei das Hauptprogramm zu blockieren.  
 ![grafik](https://user-images.githubusercontent.com/79520423/166140455-b641ec76-8c87-446d-a6ba-b8b6de74082c.png)
 
-Dies ist z.B: dann nützlich, wenn eine Chat App in einer Schleife neue Nachrichten abgefragt werden sollen. 
+Dies ist z.B: dann nützlich, wenn eine Chat App in einer Schleife neue Nachrichten abgefragen soll. 
 Auf diese Weise kann der Neben-Thread die schleife durchlaufen, und gleichzeitig das Hauptprogramm weitere Aufgaben ausführen.
 
 #### Threads in Java können auf 3 Arten erstellt werden:  
@@ -269,6 +269,20 @@ Diesen Thread starten wir wiederrum direkt mit der `start()` Methode.
 ###### ❗Außerdem ist es wichtig hinter der geschwungenen Klammer des Threads einen Strichpunkt zu setzen.
 
 ## Vererbung
+
+Die Idee hinter Vererbung liegt darin, Eigenschaften und Methoden von einer Oberklasse _(Superklasse)_ für neue _Unterklassen(Subklasse)_ zu verwenden.
+Beispiel verschiedene Fahrzeugtypen:
+
+![grafik](https://user-images.githubusercontent.com/79520423/180259277-e0979352-fe5b-46ca-9d69-155a575f34a3.png)  
+Egal ob Motorrad oder Auto, beides sind Fahrzeuge. Genauso sind beide, Audi Q8 und Tesla Model S Autos.  
+Ein Auto muss aber nicht zwingend ein Audi Q8 sein!
+
+Ein Audi Q8 hat dabei alle funktionen und Eigenschaften eines Autos, aber nicht umgekehrt❗
+Ein Auto hat wiederrum alle Eigenschaften und funktionen eines Fahrzeugs, ebenfalls aber nicht umgekehrt❗
+
+Ein Tesla hat seine eigenen funktionen + zusätzlich die von Auto und Fahrzeug.
+![grafik](https://user-images.githubusercontent.com/79520423/180265725-e63644a3-ba5c-44ce-9d9d-c3aad651db89.png)
+
 
 ## Interfaces
 
