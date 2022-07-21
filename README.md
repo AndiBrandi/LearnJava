@@ -264,6 +264,12 @@ Diesen Thread starten wir wiederrum direkt mit der `start()` Methode.
 
 ###### ❗Außerdem ist es wichtig hinter der geschwungenen Klammer des Threads einen Strichpunkt zu setzen.
 
+## Vererbung
+
+## Interfaces
+
+## Abstrakte Klassen
+
 
 # JavaFX Basic
 
