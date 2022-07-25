@@ -288,9 +288,58 @@ Ein Tesla hat seine eigenen funktionen + zusätzlich die von Auto und Fahrzeug.
 
 "Ein Interface ist eine Art vertrag" heißt, ein Interface hat die Aufgabe, dem Compiler garantieren zu können, dass Klasse A eine bestimmte Methode beinhaltet.
 
-Anhand eines Beispiels erklärt:
+An einem Beispiel erklärt:
 
+Wir haben verschiedene Fahrzeugtypen: Autos, Motorräder, LKWs und Busse.  
 
+![img.png](img.png)
+
+Ein Programm soll in der `testVehicleTopSpeed()` Methode verschiedene Typen von Fahrzeugen auf einem Prüfstand auf ihre höchstgeschwindigkeit prüfen. 
+Dazu muss das geprüfte Fahrzeug einfach nur gas geben, also in unserem Kontext die `accelerate()` Methode aufrufen.
+
+Hier stellen sich aber zwei Probleme:
+
+- Wir müssen dem Compiler garantieren dass die übergebene Klasse die Methode `accelerate()` wirklich implementiert hat.
+- Da wir verschiedene Fahrzeugtypen haben müssten wir für jeden Typ eine eigene Testmethode erstellen.
+
+Beide Probleme lassen sich mit einem Interface relativ leicht beheben.
+
+```java
+
+import Java_Adv_Interfaces.Auto;
+import Java_Adv_Interfaces.IDriveable;
+import Java_Adv_Interfaces.Motorrad;
+
+public class Main_Interfaces {
+
+    public static void main(String[] args) {
+
+        Auto auto = new Auto();
+        Motorrad motorrad = new Motorrad();
+
+        testVehicleTopSpeed(auto);
+        
+        testVehicleTopSpeed(motorrad);
+    }
+
+    static int testVehicleTopSpeed(IDriveable vehicle) {
+
+        vehicle.accelerate();
+
+    }
+
+}
+```
+
+Anstelle von fixen Klassen, kann ein übergabeparameter einer Methode, oder eine Variable auch als
+Interface definiert sein.
+
+Also erstellen wir besagten Vertrag (***IDriveable***) für den Compiler und lassen jeden Fahrzeugtyp der fahrbar 
+ist den Vertrag "unterschreiben" `implements IDriveable`
+
+Nun ist gewährleistet dass das Programm die `accelerate()` Methode jedes Fahrzeugtypen aufrufen kann, ohne für jeden Typ
+unterschiedliche Logik einbauen zu müssen. Auf dem übergebenen Objekt `vehicle` kann aber nur die `accelerate()` Methode aufgerufen werden
+und nicht die spezifischen Methoden die jede einzelne Klasse hat, denn das steht ja nicht im Vertrag!
 
 ## Abstrakte Klassen
 

@@ -4,10 +4,19 @@ public class Main_Interfaces {
 
     public static void main(String[] args) {
 
-        IRepairable repairable = new Spitzhacke(1);
+        Auto auto = new Auto(1);
+
+        testVehicleTopSpeed(auto);
 
 
+    }
 
+
+    static void testVehicleTopSpeed(IDriveable vehicle) {
+
+        int topSpeed;
+        topSpeed = vehicle.accelerate();
+        System.out.println(topSpeed);
     }
 
 }
