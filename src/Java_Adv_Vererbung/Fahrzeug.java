@@ -2,7 +2,7 @@ package Java_Adv_Vererbung;
 
 public class Fahrzeug {
 
-    private String farbe = "";
+    public String farbe = "";
     private int sitzAnzahl = 0;
     private int leistung = 0;
 

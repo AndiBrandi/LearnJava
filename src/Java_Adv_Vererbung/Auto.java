@@ -15,6 +15,7 @@ public class Auto extends Fahrzeug {
 
     public void motorhaubeOeffnen() {
         System.out.println("Motorhaube vom Auto wird geöffnet");
+
     }
 
 }
