@@ -15,7 +15,8 @@ public class Auto extends Fahrzeug {
 
     public void motorhaubeOeffnen() {
         System.out.println("Motorhaube vom Auto wird geöffnet");
-
+        //Diese Methode kann von allen Klassen aufgerufen werden die von Auto erben
+        //Wäre diese Methode private ebenso, da es keinen Unterschied macht.
     }
 
 }

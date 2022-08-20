@@ -588,7 +588,7 @@ Für andere Typen von SQL Statements wie "INSERT INTO", "UPDATE" und "DELETE" wi
 
 #### ❗Wenn ein Abfragetyp ohne Rückgabe ("INSERT","UPDATE","DELETE") verwendet wird genügt es das Statement auszuführen mit `ececuteUpdate()`. Man muss dies nicht in ein ResultSet speichern. Der vierte Punkt fällt in diesem Fall weg❗
 
-### 4. Daten aus dem ResultSet extrahieren
+### 4. Daten aus dem ResultSet holen.
 
 Wenn es sich aber um ein `SELECT` Statement handelt, d.h. wenn Daten zurückkommen müssen wir diese logischerweise noch
 verarbeiten
