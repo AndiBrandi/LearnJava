@@ -44,8 +44,7 @@ variable zu speichern, was natürlich nicht geht.
    In den meisten Fällen weiß die IDE hier schon wo der Fehler liegt und zeigt diesen auch an.  
    ![grafik](https://user-images.githubusercontent.com/79520423/153776422-eff25a1b-274a-42ad-841a-870baf6a965a.png)
 
-###### _In unserem Beispiel gibt es einen Fehler da der Inhalt eines TextFelds (String) nicht einfach in eine Integer
-variable gespeichert werden kann_
+###### _In unserem Beispiel gibt es einen Fehler da der Inhalt eines TextFelds (String) nicht einfach in eine Integer variable gespeichert werden kann_
 
 3. Weißt du aber nicht was du mit dieser Information anfangen sollst ist es hilfreich sich mit dem Cursor auf den rot
    markierten Code zu stellen und die Tastenkombination `Alt`+`Enter` zu drücken.  
