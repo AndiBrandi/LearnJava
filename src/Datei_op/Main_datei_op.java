@@ -17,6 +17,10 @@ public class Main_datei_op {
 
     }
 
+    /**
+     * Liest den Text der in der test.txt Datei steht
+     * @return den text der in der Datei steht.
+     */
     public static String read() {
 
         String string = "";
@@ -34,7 +38,10 @@ public class Main_datei_op {
         return string;
     }
 
-
+    /**
+     * Schreibt den übergebenen Text in die test.txt datei
+     * @param s der Text der in die Datei geschrieben werden soll
+     */
     private static void write(String s) {
 
         try {

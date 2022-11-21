@@ -253,11 +253,11 @@ blockieren.
 
 Dies ist z.B: dann nützlich, wenn eine Chat App in einer Schleife neue Nachrichten abgefragen soll. Auf diese Weise kann
 der Neben-Thread die schleife durchlaufen, und gleichzeitig das Hauptprogramm weitere Aufgaben ausführen.
-
-#### Threads in Java können auf 3 Arten erstellt werden:
 ---
+### Threads in Java können auf 3 Arten erstellt werden:
 
-### Klasse extends Thread
+
+### -Klasse extends Thread
 
 Beispiel CountDown: Der Thread soll im Countdown Objekt die Sekunden herunterzählen.
 
@@ -275,7 +275,7 @@ Um den Thread zu starten ruft man vom erstellten Objekt die start Methode auf.
 
 ---
 
-### Klasse implements Runnable
+### -Klasse implements Runnable
 
 Implementiert eine Klasse dieses Interface muss sie auch die `run` Methode implementieren.  
 ![grafik](https://user-images.githubusercontent.com/79520423/166141790-4c55f2ff-9408-4b1e-8a09-d2516e4d2ecf.png)
@@ -288,7 +288,7 @@ neue Thread kann dann wiederrum mit der `start()` Methode gestartet werden.
 
 ---
 
-### Anonymer Thread
+### -Anonymer Thread
 
 Ein anonymer Thread kann grundsätzlich an einer beliebigen Stelle im Programm erstellt werden.  
 Dies sähe dann wie folgt aus:
@@ -314,8 +314,8 @@ Ein Auto muss aber nicht zwingend ein Audi Q8 sein!
 Um die grundfunktionen eines motorisierten Fahrzeugs also nicht für jeden Typ neu schreiben zu müssen,
 verwenden wir Vererbung.
 
-Ein Audi Q8 hat dabei alle funktionen und Eigenschaften eines Autos, aber nicht umgekehrt❗ Ein Auto hat wiederrum alle
-Eigenschaften und Funktionen eines Fahrzeugs, ebenfalls aber nicht umgekehrt❗
+Ein Audi Q8 hat dabei alle funktionen und Eigenschaften eines Autos, aber nicht umgekehrt❗ 
+Ein Auto hat wiederrum alle Eigenschaften und Funktionen eines Fahrzeugs, ebenfalls aber nicht umgekehrt❗
 
 Ein Tesla hat z.B seine eigenen funktionen + zusätzlich die von _Auto_ **und** _Fahrzeug_.
 ![grafik](https://user-images.githubusercontent.com/79520423/180265725-e63644a3-ba5c-44ce-9d9d-c3aad651db89.png)
@@ -338,7 +338,7 @@ public class Auto extends Fahrzeug {
 
 Mit `super()` wird der Konstruktor der Superklasse aufgerufen, was im Klartext heißt: 
 Beim erstellen von einem neuen Auto Objekt, erstellen wir unser Auto Objekt, 
-mit all seinen Variablen und Methoden + die Variablen und Methoden von Fahrzeug vereint.
+mit all seinen Variablen und Methoden + die Variablen und Methoden der Klasse `Fahrzeug` vereint.
 
 
 ```java
@@ -520,7 +520,7 @@ Beispiel für eine Scene mit einem Label `helloLabel`, einem TextFeld `textField
 </AnchorPane>
 ```
 
-Damit die Scene weiß wer sie steuert (Controller) muss dieser erstmal dazu gelinkt werden:
+Damit die Scene weiß, wer sie steuert (Controller) muss dieser erstmal dazu gelinkt werden:
 
 - Auf der untersten Schicht der Scene, hier die Anchorpane, muss ein Attribut `fx:controller="..."`fxml als Inhalt den
   Controller der Scene beinhalten. In diesem Fall "JavaFX_Basic.Controller", *Package:* `JavaFX_Basic` + `.` + *
@@ -529,6 +529,47 @@ Damit die Scene weiß wer sie steuert (Controller) muss dieser erstmal dazu geli
 # JavaFX Advanced
 
 # Dateioperationen
+
+Darunter ist das lesen bzw. schreiben von- und zu dateien gemeint.
+
+### Lesen
+
+In Java lässt sich das lesen einer Datei recht unkompliziert mit einem `BufferedReader` 
+bewerkstelligen,  
+auf dem wir dann die readLine() methode aufrufen, um die Datei zu lesen
+
+Der BufferedReader kann allerdings von selbst nicht lesen,  
+weswegen wir ihm beim erstellen eine Klasse, die die Grundfunktionen dafür besitzt übergeben, beispielsweise einen `FileReader()`
+
+> Der FileReader übernimmt die Hauptaufgabe des Lesens, Zeichen pro Zeichen aus der Datei heraus.  
+> Der BufferedReader ist sozusagen eine Rüstung mit zusätzlichen Features, die dem FileReader angezogen wird. 
+> Dadurch kann dann gleich eine ganze Zeile eingelesen werden, anstatt nur einzelnen Zeichen.
+###### Also fast wie Tony Stark und seine Iron Man Suits. Tony ist mit Rüstung zwar stärker, die Rüstung alleine kann aber nichts ausrichten.
+
+
+```java
+
+    try {
+        // Create new Reader
+        BufferedReader reader = new BufferedReader(new FileReader("src/Datei_op/test.txt"));
+
+        // Read with your reader
+        string = reader.readLine();
+
+        } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+```
+
+
+
+### Schreiben
+
+Der Ablauf zum schreiben in eine Datei funktioniert größtenteils genau gleich wie das Lesen. 
+Mit dem kleinen aber feinen Unterschied dass hier neben der write() Methode, zusätzlich die append() Methode gibt,  
+welche anstatt den Text in der Datei mit dem neuen Text zu ersetzen, den neuen Text einfach hinten an den alten Text dranhängt.
+
 
 # JSON
 
