@@ -2,8 +2,8 @@
 
 ### Ein Guide für die gängisten Aufgaben bei der Java Programmierung (in [IntelliJ IDEA Ultimate](https://www.jetbrains.com/de-de/idea/))
 
-von Andreas Brandstetter (5AHEL HTL-Steyr)
-
+von Andreas Brandstetter (5AHEL HTL-Steyr)  
+❗Dieses Dokument ist nicht vollständig und dient nicht als verifizierter Guide zur Java Programmierung. Es ist lediglich eine Hilfestellung für schulische Kollegen beim lernen.❗
 <details>
   <summary>Inhaltsverzeichnis</summary>
 
